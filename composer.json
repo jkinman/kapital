@@ -15,6 +15,10 @@
 			"app/tests/TestCase.php"
 		]
 	},
+	"require": {
+    	"laravel/framework": "4.0.*",
+    	"way/generators": "dev-master"
+	},
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan optimize"

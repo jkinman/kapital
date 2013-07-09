@@ -21,6 +21,8 @@ Route::get('home', function()
     return View::make('home');
 });
 
+Route::resource( 'users', 'UserController' );
+
 Route::get('users', 'UserController@getIndex');
 
 // Route::get('users', function()

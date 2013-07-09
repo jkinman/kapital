@@ -13,6 +13,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	protected $table = 'users';
 
 	/**
+	 * The attributes excluded from the model's mass assignment
+	 *
+	 * @var array
+	 */
+	protected $guarded = array('id', 'account_id');	
+
+	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
