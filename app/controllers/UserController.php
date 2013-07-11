@@ -15,10 +15,6 @@ class UserController extends BaseController {
         return View::make( 'home', array( 'users' => $users ));
     }
 
-    public function postUser() {
-
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -33,6 +29,7 @@ class UserController extends BaseController {
         return View::make( 'user.create' )->with( 'user', $user );
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
@@ -41,7 +38,8 @@ class UserController extends BaseController {
     public function store()
     {
         //
-        print_r( 'store' );
+        $newUser = Input::all();
+        print_r( $newUser  );
     }
 
     /**
