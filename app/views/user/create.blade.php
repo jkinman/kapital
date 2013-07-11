@@ -1,8 +1,9 @@
 
 		
-	<h1>Add a new person / band</h1>
+<h1>Add a new singer or band</h1>
 
-{{ Form::model( $user ) }}
+{{ Form::open(array('url' => 'user', 'files' => true)) }}
+
 	{{Form::label('email', 'E-Mail Address');}}
 	{{ Form::text( 'email' );}}
 	
