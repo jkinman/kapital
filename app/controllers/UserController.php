@@ -9,10 +9,14 @@ class UserController extends BaseController {
      */
     public function index()
     {
-        //
+
         $users = User::all();
 
         return View::make( 'home', array( 'users' => $users ));
+    }
+
+    public function postUser() {
+
     }
 
     /**
@@ -22,9 +26,11 @@ class UserController extends BaseController {
      */
     public function create()
     {
-        //
+
         $user = new User;
-        return View::make( 'users/create', array( 'user' => $user) );
+
+        // return View::make( 'user.create' );
+        return View::make( 'user.create' )->with( 'user', $user );
     }
 
     /**
@@ -35,6 +41,7 @@ class UserController extends BaseController {
     public function store()
     {
         //
+        print_r( 'store' );
     }
 
     /**
