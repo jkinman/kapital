@@ -21,14 +21,12 @@ Route::get('home', function()
     return View::make('home');
 });
 
+// REST route for user
+Route::resource( 'user', 'UserController' );
 
 // user model route
 Route::model( 'user', 'User' );
 
-Route::resource( 'users', 'UserController' );
-
-Route::get('users', 	'UserController@getIndex');
-Route::get('new_user', 	'UserController@getCreate');
 
 // Route::get('users', function()
 // {
