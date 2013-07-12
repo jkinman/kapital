@@ -1,3 +1,6 @@
+@extends('layout')
+
+@section('content')
 
 		
 <h1>Add a new singer or band</h1>
@@ -16,3 +19,5 @@
 	{{ Form::submit('add'); }}
 
 {{ Form::close() }}
+
+@stop

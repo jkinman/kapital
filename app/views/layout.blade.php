@@ -10,7 +10,7 @@
 	</head>
 	<body>
 
-		<div class="navbar">
+		<div class="navbar nav-pills nav-right">
 		  <div class="navbar-inner">
 			<div class="container">
 			  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -19,25 +19,32 @@
 				<span class="icon-bar"></span>
 			  </a>
 			  <a class="brand" href="index.htm"><img src="img/logo.png" alt="your slogan here"></a>
-			  <h1>Kapital Entertainment</h1>
+			  <h1 class="brand">Kapital Entertainment</h1>
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
 					<li><a href="index.htm">Kapital</a></li>
-					<li>
-						<a href="#" role="menu" data-toggle="dropdown" aria-labelledby="dLabel">Artists</a>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="dLabel">Artists <i class="caret"></i></a>
 						<ul class="dropdown-menu" >
-							<li><a tabindex="-1" href="#">Action</a></li>
-							<li><a tabindex="-1" href="#">Another action</a></li>
-							<li><a tabindex="-1" href="#">Something else here</a></li>
+							<li><a tabindex="-1" href="#">Miss Virginia Rose</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
+							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li class="divider"></li>
-							<li><a tabindex="-1" href="#">Separated link</a></li>
+							<li><a tabindex="-1" href="#">artist page</a></li>
 						</ul>
-					</li>				  	
-				
-				  <li><a href="portfolio.htm">Schedule</a></li>
-				  <li><a href="blog.htm">Blog</a></li>
-				  <li><a href="about.htm">Media</a></li>
-				  <li><a href="contact.htm">Contact</a></li>
+					</li>
+					<li><a href="portfolio.htm">Schedule</a></li>
+					<li><a href="blog.htm">Blog</a></li>
+					<li><a href="about.htm">Media</a></li>
+					<li><a href="contact.htm">Contact</a></li>
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</div>
@@ -47,56 +54,6 @@
 
 			@yield('content')
 
-	  <!-- Main hero unit for a primary marketing message or call to action -->
-	  <div class="row">
-		<div class="span12 hidden-phone">
-		  <div id="myCarousel" class="carousel slide">
-			<div class="carousel-inner">
-			  <div class="item">
-				<img src="img/slide1.jpg" alt="">
-			  </div>
-			  <div class="item">
-				<img src="img/slide2.jpg" alt="">
-			  </div>
-			  <div class="item active">
-				<img src="img/slide3.jpg" alt="">
-			  </div>
-			</div>
-			<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-			<a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-		  </div>
-		</div>
-		
-	 </div>
-	 <!-- <div class="row landingSlogan">
-		<div class="span12">
-		  <h2>Put your slogan here. This is the perfect place to put some eye catching text. It is also great for SEO!</h2>
-		</div>
-	 </div> -->
-	  <!-- Portfolio row of columns -->
-	  <div class="row">
-	   <div class="span1">
-		  <img src="img/icon-response.png">
-	   </div>
-	   <div class="span3">
-		  <h3>Responsive Grid Layout</h3>
-		  <p>No matter what screen you are viewing this template on it will adjust. You can add videos, images and forms, they are all responsive.</p>
-		</div>
-		<div class="span1">
-		  <img src="img/icon-custom.png">
-		</div>
-		<div class="span3">
-		  <h3>Customization</h3>
-		  <p>It's a breeze to customize anything on this template. We made the code clean and simple so you can tweak to your hearts content.</p>
-		</div>
-		<div class="span1">
-		  <img src="img/icon-support.png">
-		</div>
-		<div class="span3">
-		  <h3>Continued Support</h3>
-		  <p>We are here for you. Have a question? Go ahead and ask us and we will help you find the answer.</p>
-		</div>
-	</div>
 		</div>
 <!-- FOOTER -->
 	  <footer>
