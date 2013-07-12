@@ -8,7 +8,7 @@ JQTWEET = {
 	// core function of jqtweet
 	loadTweets: function() {
 		$.ajax({
-			url: 'http://api.twitter.com/1/statuses/user_timeline.json/',
+			url: 'http://api.twitter.com/1/statuses/katedunnroy.json/',
 			type: 'GET',
 			dataType: 'jsonp',
 			data: {
