@@ -32,3 +32,5 @@ Route::model( 'user', 'User' );
 // {
 //     return 'Users!';
 // });
+
+Route::resource('blogs', 'BlogsController');
