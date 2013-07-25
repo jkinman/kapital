@@ -18,11 +18,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="index.htm"><img src="img/logo.png" alt="your slogan here"></a>
+			  <a class="brand" href="index"><img src="img/logo.png" alt="your slogan here"></a>
 			  <h1 class="brand">Kapital Entertainment</h1>
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
-					<li><a href="index.htm">Kapital</a></li>
+					<li><a href="index">Kapital</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="dLabel">Artists <i class="caret"></i></a>
 						<ul class="dropdown-menu" >
