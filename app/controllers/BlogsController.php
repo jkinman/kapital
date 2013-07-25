@@ -22,7 +22,8 @@ class BlogsController extends BaseController {
      */
     public function create()
     {
-        //
+        $blog = new Blog();
+        return View::make( 'blogs.create', compact( 'blog' ));
     }
 
     /**
@@ -32,7 +33,9 @@ class BlogsController extends BaseController {
      */
     public function store()
     {
-        //
+        // throw the contents of the form into a new record
+
+        $newEntry = Blog::create( Input::all() );
     }
 
     /**
