@@ -23,6 +23,9 @@ Route::get('home', function()
 
 // REST route for user
 Route::resource( 'user', 'UserController' );
+// REST route for user
+
+Route::resource( 'artists', 'UserController' );
 
 // user model route
 Route::model( 'user', 'User' );
