@@ -12,7 +12,7 @@ class UserController extends BaseController {
 
         $users = User::all();
 
-        return View::make( 'home', array( 'users' => $users ));
+        return View::make( 'user.index', array( 'users' => $users ));
     }
 
     /**
