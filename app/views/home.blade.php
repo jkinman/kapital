@@ -1,8 +1,8 @@
 @extends('layout')
 
 @section('content')
-    <h1>Kapital Entertainmant</h1>
-    <?php echo( $users) ;?>
+    <h1>Kapital Entertainment</h1>
+    <?//php echo( $users) ;?>
 
     	  <!-- Main hero unit for a primary marketing message or call to action -->
 	  <div class="row">
@@ -10,13 +10,13 @@
 		  <div id="myCarousel" class="carousel slide">
 			<div class="carousel-inner">
 			  <div class="item">
-				<img src="img/slide1.jpg" alt="">
+				<img src="img/front1.jpg" alt="">
 			  </div>
 			  <div class="item">
-				<img src="img/slide2.jpg" alt="">
+				<img src="img/front2.jpg" alt="">
 			  </div>
 			  <div class="item active">
-				<img src="img/slide3.jpg" alt="">
+				<img src="img/front3.jpg" alt="">
 			  </div>
 			</div>
 			<a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
@@ -36,22 +36,22 @@
 		  <img src="img/icon-response.png">
 	   </div>
 	   <div class="span3">
-		  <h3>Responsive Grid Layout</h3>
-		  <p>No matter what screen you are viewing this template on it will adjust. You can add videos, images and forms, they are all responsive.</p>
+		  <h3>Section one</h3>
+		  <p>Kapital does all this shit and blah blah blah blah blah blah blah blah. Katy Katy Katy.</p>
 		</div>
 		<div class="span1">
 		  <img src="img/icon-custom.png">
 		</div>
 		<div class="span3">
-		  <h3>Customization</h3>
-		  <p>It's a breeze to customize anything on this template. We made the code clean and simple so you can tweak to your hearts content.</p>
+		  <h3>Section Two</h3>
+		  Food truck Pinterest 3 wolf moon yr chillwave. Etsy sriracha flannel disrupt, keffiyeh blue bottle messenger bag four loko meggings salvia +1 pour-over yr. You probably haven't heard of them art party trust fund keffiyeh Bushwick mlkshk, Schlitz whatever biodiesel food truck seitan gluten-free.</p>
 		</div>
 		<div class="span1">
 		  <img src="img/icon-support.png">
 		</div>
 		<div class="span3">
-		  <h3>Continued Support</h3>
-		  <p>We are here for you. Have a question? Go ahead and ask us and we will help you find the answer.</p>
+		  <h3>Section Three</h3>
+		  <p>Skateboard Etsy post-ironic photo booth dreamcatcher blue bottle fanny pack keytar. Locavore Tonx shoreditch food truck iPhone Austin, DIY gentrify. Odd Future synth organic, gentrify pickled tote bag tofu.</p>
 		</div>
 	</div>
 
