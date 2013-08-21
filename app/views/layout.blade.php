@@ -18,11 +18,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="index"><img src="img/logo.png" alt="your slogan here"></a>
+			  <a class="brand" href="home"><img src="img/kapitalLogo.jpg" alt="your slogan here"></a>
 			  <h1 class="brand">Kapital Entertainment</h1>
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
-					<li><a href="index">Kapital</a></li>
+					<li><a href="home">Kapital</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="dLabel">Artists <i class="caret"></i></a>
 						<ul class="dropdown-menu" >
@@ -42,7 +42,7 @@
 						</ul>
 					</li>
 					<li><a href="portfolio.htm">Schedule</a></li>
-					<li><a href="blog.htm">Blog</a></li>
+					<li><a href="blogs">Blog</a></li>
 					<li><a href="about.htm">Media</a></li>
 					<li><a href="contact.htm">Contact</a></li>
 				</ul>
@@ -70,15 +70,14 @@
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit nisl ac metus porta placerat. Donec semper consectetur neque eget hendrerit. <a href="http://www.littlesparkvt.com">Read More></a></p>
 		  </div>
 		  <div class="span3">
-			<h3>Contact Us!</h3>
-				<p>Have a question or comment? We can help you!</p>
-				<br>by phone: 1-(555)-555-5555 
-				<br>by mail: info@littlesparkvt.com
-				<br>or by our: <a href="contact.htm">Contact Page</a>
+			<h3>Contact Kapial</h3>
+				<p>Make music or want music? wanna chat? Get at us.</p>
+				<br>cell: +1-604-808-7110 
+				<br>email: kate@kapitalentertainment.ca
 		  </div>
 		  <div class="span3">
-			<h3>Newsletter</h3>
-			<p>Subscribe to our newsletter and get the latest news!</p>
+			<h3>Get on the list</h3>
+			<p>Subscribe to our newsletter and get the scoop on events.</p>
 			<form action="mail.php" id="subscribe-form" method="post">
 			  <input type="text" name="email" id="email" placeholder="Your Email Address">
 			  <button type="submit" class="btn btn-primary">Sign Up</button>
