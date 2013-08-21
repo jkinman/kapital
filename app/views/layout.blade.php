@@ -23,28 +23,24 @@
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
 					<li><a href="home">Kapital</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-labelledby="dLabel">Artists <i class="caret"></i></a>
-						<ul class="dropdown-menu" >
+				<!--	<li class="dropdown"> -->
+						<li><a href="artists" >Artists</a></li>
+				<!--		<ul class="dropdown-menu" >
 							<li><a tabindex="-1" href="#">Miss Virginia Rose</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
-							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
-							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
-							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
-							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
-							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
 							<li class="divider"></li>
-							<li><a tabindex="-1" href="#">artist page</a></li>
+							<li><a tabindex="-1" href="artists">artist page</a></li>
 						</ul>
 					</li>
+				-->
 					<li><a href="portfolio.htm">Schedule</a></li>
 					<li><a href="blogs">Blog</a></li>
 					<li><a href="about.htm">Media</a></li>
-					<li><a href="contact.htm">Contact</a></li>
+					<!-- <li><a href="contact.htm">Contact</a></li> -->
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</div>
@@ -72,15 +68,15 @@
 		  <div class="span3">
 			<h3>Contact Kapial</h3>
 				<p>Make music or want music? wanna chat? Get at us.</p>
-				<br>cell: +1-604-808-7110 
-				<br>email: kate@kapitalentertainment.ca
+				<br><a href='tel:1-604-808-7110'>+1-604-808-7110</a> 
+				<br><a href='mailto:kate@kapitalentertainment.ca'>kate@kapitalentertainment.ca</a>
 		  </div>
 		  <div class="span3">
 			<h3>Get on the list</h3>
 			<p>Subscribe to our newsletter and get the scoop on events.</p>
 			<form action="mail.php" id="subscribe-form" method="post">
 			  <input type="text" name="email" id="email" placeholder="Your Email Address">
-			  <button type="submit" class="btn btn-primary">Sign Up</button>
+			  <button type="submit" class="button">Sign Up</button>
 			</form>
 		  </div>
 		</div>
