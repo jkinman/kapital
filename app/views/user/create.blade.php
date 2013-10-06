@@ -5,7 +5,7 @@
 		
 <h1>Add a new singer or band</h1>
 
-{{ Form::open(array('url' => 'user', 'files' => true)) }}
+{{ Form::open(array('url' => 'users', 'files' => true)) }}
 
 	{{Form::label('email', 'E-Mail Address');}}
 	{{ Form::email( 'email' );}}
@@ -15,6 +15,9 @@
 
 	{{Form::label('name', 'name');}}
 	{{ Form::text( 'name' );}}
+
+	{{Form::label('admin', 'administrator (user can make new users)');}}
+	{{ Form::checkbox( 'admin' );}}
 	
 	{{Form::label('bio', 'artist info');}}
 	{{ Form::textarea( 'bio' );}}
