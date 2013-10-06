@@ -28,6 +28,10 @@ Route::get('home', function()
 });
 
 Route::resource( 'user', 			'UserController' );
-Route::resource( 'artist', 			'ArtistController' );
 Route::resource( 'blog', 			'BlogController' );
 
+
+
+Route::resource('artists', 'ArtistsController');
+
+Route::resource('assets', 'AssetsController');
