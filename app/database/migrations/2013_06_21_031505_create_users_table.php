@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration {
 			$t->text('bio');
 			$t->string('picture');
 			$t->integer('artist_id');
+			$t->boolean('admin');
 			$t->integer('last_activity');
 			$t->timestamps();
 			$t->softDeletes();
