@@ -58,13 +58,10 @@ class UsersController extends BaseController {
      */
     public function create()
     {
-        $artists = Artist::all();
+        $artists = Artist::all()->lists( 'name' );
         $user = new User;
 
-        // return View::make( 'user.create' );
-
         return View::make( 'user.create' , array( 'user' => $user, 'artists' => $artists ));
-        // return View::make( 'user.create' )->with( 'user', $user );
     }
 
 
@@ -77,7 +74,9 @@ class UsersController extends BaseController {
     {
         //
         $newUser = Input::all();
+        $newUser['password'] = Hash::make( $newUser['password'] );
         print_r( $newUser  );
+
     }
 
     /**
