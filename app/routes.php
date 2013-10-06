@@ -11,29 +11,23 @@
 |
 */
 
+// user model route
+Route::model( 'user', 'User' );
+
 Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::get( 'superSecretLogin', array( 'uses' => 'UserController@loginForm' ));
+Route::post( 'superSecretLogin', array( 'uses' => 'UserController@login' ));
 
 Route::get('home', function()
 {
     return View::make('home');
 });
 
-// REST route for user
-Route::resource( 'user', 'UserController' );
-// REST route for user
+Route::resource( 'user', 			'UserController' );
+Route::resource( 'artist', 			'ArtistController' );
+Route::resource( 'blog', 			'BlogController' );
 
-Route::resource( 'artists', 'UserController' );
-
-// user model route
-Route::model( 'user', 'User' );
-
-
-// Route::get('users', function()
-// {
-//     return 'Users!';
-// });
-
-Route::resource('blogs', 'BlogsController');

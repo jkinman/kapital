@@ -3,6 +3,42 @@
 class UserController extends BaseController {
 
     /**
+     * Show login form
+     *
+     * @return Response
+     */
+    public function loginForm()
+    {
+        return View::make( 'user.login' );
+    }
+
+    /**
+     * do auth work here
+     *
+     * @return Response
+     */
+    public function login()
+    {
+        // call to auth on the users table
+
+        // create our user data for the authentication
+        $userData = array(
+            'email'     => Input::get('email'),
+            'password'  => Input::get('password')
+        );
+
+        if (Auth::attempt( $userData )) {
+            return Redirect::to('home');
+        }
+        else {
+            Session::flash( 'message', 'login failed' );
+            return Redirect::to('superSecretLogin');
+        }
+    }
+
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return Response
