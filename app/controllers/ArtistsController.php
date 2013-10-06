@@ -10,6 +10,8 @@ class ArtistsController extends BaseController {
     public function index()
     {
         //
+        $artists = Artist::all();
+        return View::make( 'artists.index', array( 'artists' => $artists ));
     }
 
     /**
@@ -20,6 +22,10 @@ class ArtistsController extends BaseController {
     public function create()
     {
         //
+        $artist = new Artist;
+
+        return View::make( 'artists.create' , array( 'artist' => $artist ));
+
     }
 
     /**
@@ -30,6 +36,10 @@ class ArtistsController extends BaseController {
     public function store()
     {
         //
+
+        $artist = Artist::create( Input::all() );
+        return Redirect::to( 'artists/' . $artist['id'] );
+
     }
 
     /**
@@ -41,6 +51,10 @@ class ArtistsController extends BaseController {
     public function show($id)
     {
         //
+        // return( 'artist with id '.$id );
+        $artist = Artist::find( $id );
+        return( var_dump($artist));
+        return View::make( 'artists.show' , array( 'artist' => $artist ));
     }
 
     /**

@@ -12,7 +12,7 @@
 */
 
 // user model route
-Route::model( 'user', 'User' );
+// Route::model( 'user', 'User' );
 
 Route::get('/', function()
 {
@@ -27,8 +27,8 @@ Route::get('home', function()
     return View::make('home');
 });
 
-Route::resource( 'user', 			'UserController' );
-Route::resource( 'blog', 			'BlogController' );
+Route::resource( 'users', 			'UsersController' );
+Route::resource( 'blogs', 			'BlogsController' );
 
 
 

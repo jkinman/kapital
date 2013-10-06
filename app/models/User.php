@@ -5,6 +5,10 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
+	public function artist() {
+		return $this->belongsTo( 'artist' );
+	}
+
 	/**
 	 * The database table used by the model.
 	 *

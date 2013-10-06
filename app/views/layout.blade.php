@@ -40,6 +40,17 @@
 					<li><a href="portfolio.htm">Schedule</a></li>
 					<li><a href="blogs">Blog</a></li>
 					<li><a href="about.htm">Media</a></li>
+					<li class="dropdown">
+						<a href="#" data-toggle="dropdown">Admin Menu<span class="glyphicon glyphicon-align-justify"></span></a>
+						<ul class="dropdown-menu" >
+							<li><a tabindex="-1" href="/blogs/create">Post Update</a></li>
+							<li><a tabindex="-1" href="/medias/create">Add Pic / Link / Video</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="/users/create">Add new user</a></li>
+							<li><a tabindex="-1" href="/artists/create">Add new band</a></li>
+						</ul>
+					</li>
+				
 					<!-- <li><a href="contact.htm">Contact</a></li> -->
 				</ul>
 			  </div><!--/.nav-collapse -->

@@ -1,1 +1,4 @@
-show.blade
+@extends('layout')
+
+@section('content')
+
