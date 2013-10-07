@@ -22,6 +22,8 @@ class CreateUsersTable extends Migration {
 			$t->string('picture');
 			$t->integer('artist_id');
 			$t->boolean('admin');
+            $t->text('facebook_url');
+            $t->text('twitter_url');
 			$t->integer('last_activity');
 			$t->timestamps();
 			$t->softDeletes();

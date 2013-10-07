@@ -17,7 +17,8 @@ class CreateAssetsTable extends Migration {
             $table->text('title');
 			$table->text('summary');
 			$table->integer('artist_id');
-			$table->text('url');
+            $table->text('url');
+            $table->text('type');
             $table->timestamps();
         });
     }
