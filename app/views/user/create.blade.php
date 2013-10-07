@@ -13,6 +13,9 @@
 	{{Form::label('password', 'password');}}
 	{{Form::password('password');}}
 
+	{{Form::label('artist_id', 'What band does this person belong to?');}}
+	{{ Form::select( 'artist_id', $artists );}}
+
 	{{Form::label('name', 'name');}}
 	{{ Form::text( 'name' );}}
 
@@ -21,9 +24,15 @@
 	
 	{{Form::label('bio', 'artist info');}}
 	{{ Form::textarea( 'bio' );}}
+	
+	{{Form::label('picture', 'picture');}}
+	{{ Form::file( 'picture' );}}
 
-	{{Form::label('artist_id', 'What band does this person belong to?');}}
-	{{ Form::select( 'artist_id', $artists );}}
+	{{Form::label('facebook_url', 'facebook_url');}}
+	{{ Form::text( 'facebook_url' );}}
+
+	{{Form::label('twitter_url', 'twitter_url');}}
+	{{ Form::text( 'twitter_url' );}}
 
 	{{ Form::submit('add'); }}
 

@@ -61,6 +61,9 @@ class UsersController extends BaseController {
         $artists = Artist::all()->lists( 'name' );
         $user = new User;
 
+        echo $assetObj;
+
+
         return View::make( 'user.create' , array( 'user' => $user, 'artists' => $artists ));
     }
 
@@ -72,9 +75,25 @@ class UsersController extends BaseController {
      */
     public function store()
     {
-        //
+
         $newUser = Input::all();
         $newUser['password'] = Hash::make( $newUser['password'] );
+
+        $assetObj = new Asset;
+        $assetObj->title = 'test';
+        $assetObj->summary = 'test';
+        $assetObj->type = 'test';
+        $assetObj->url = 'http://';
+        $assetObj->artist_id = Auth::user()->id;
+        $assetObj->save();
+
+        // store the image and write an entry in the asset table
+        if (Input::hasFile('picture')) {
+            $assetObj = new Asset;
+            // $fileName = $assetObj
+            Input::file('picture')->move( base_path() . '/assets', $fileName );
+        }
+
         print_r( $newUser  );
 
     }
