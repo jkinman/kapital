@@ -13,6 +13,15 @@
 	{{Form::label('summary', 'band summary');}}
 	{{ Form::textarea( 'summary' );}}
 
+	{{Form::label('picture', 'picture');}}
+	{{ Form::file( 'picture' );}}
+
+	{{Form::label('facebook_url', 'facebook_url');}}
+	{{ Form::text( 'facebook_url' );}}
+
+	{{Form::label('twitter_url', 'twitter_url');}}
+	{{ Form::text( 'twitter_url' );}}
+
 	{{ Form::submit('add'); }}
 
 {{ Form::close() }}
