@@ -6,7 +6,7 @@
 		{{ HTML::style('css/animate.css') }}
 		{{ HTML::style('css/custom.css') }}
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600' rel='stylesheet' type='text/css'>
-
+		<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 	</head>
 	<body>
 
@@ -60,6 +60,9 @@
 		  </div>
 		</div>
 		<div class="container">
+			@if ( isset( $flash ))
+				<h2>{{{ $flash }}}</h2>
+			@endif
 
 			@yield('content')
 
@@ -99,10 +102,7 @@
 
 <!-- /container -->
 
-	<!-- Le javascript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-
+	{{ HTML::script("js/kapital.js")}}
 	{{ HTML::script("js/jquery.js") }}
 	{{ HTML::script("js/bootstrap-transition.js" ) }}
 	{{ HTML::script("js/bootstrap-alert.js") }}
