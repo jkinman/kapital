@@ -48,7 +48,7 @@ class UsersController extends BaseController {
 
         $users = User::all();
 
-        return View::make( 'user.index', array( 'users' => $users ));
+        return View::make( 'user.index', array( 'users' => $users->toArray() ));
     }
 
     /**
@@ -59,10 +59,10 @@ class UsersController extends BaseController {
     public function create()
     {
         $artists = Artist::all()->lists( 'name' );
+
         $user = new User;
 
-        echo $assetObj;
-
+        // echo $assetObj;
 
         return View::make( 'user.create' , array( 'user' => $user, 'artists' => $artists ));
     }
@@ -78,24 +78,38 @@ class UsersController extends BaseController {
 
         $newUser = Input::all();
         $newUser['password'] = Hash::make( $newUser['password'] );
-
+        if( empty($newUser['artist_id'])) {
+            $newUser['artist_id'] = 0;
+        }
         $assetObj = new Asset;
         $assetObj->title = 'test';
         $assetObj->summary = 'test';
         $assetObj->type = 'test';
         $assetObj->url = 'http://';
-        $assetObj->artist_id = Auth::user()->id;
+        $assetObj->artist_id = $newUser['artist_id']; //Auth::user()->id;
         $assetObj->save();
 
         // store the image and write an entry in the asset table
         if (Input::hasFile('picture')) {
-            $assetObj = new Asset;
-            // $fileName = $assetObj
+            // check if the directory is there
+            if( !file_exists( base_path() . '/assets' )) {
+                mkdir( base_path() . '/assets' );
+            }
+            if( !file_exists( base_path() . '/assets/users/' )) {
+                mkdir( base_path() . '/assets/users' );
+            }
+            if( !file_exists( base_path() . '/assets/users/' . $newUser['id'] )) {
+                mkdir( base_path() . '/assets/users/' . $newUser['id'] .'/' );
+            }
+            // build the file name for the picture ASSET_ID-USER_ID
+            $fileName = base_path() . '/assets/users/' . $newUser['id'] .'/' . 'profile.jpg';
             Input::file('picture')->move( base_path() . '/assets', $fileName );
         }
 
-        print_r( $newUser  );
 
+        // return View::make( 'user.create' , array( 'user' => $user, 'artists' => $artists ));
+
+        return View::make( 'user.show', array( 'user' => $newUser ))->with( 'flash', 'SUCCESS! User was created' )   ;
     }
 
     /**
@@ -117,7 +131,11 @@ class UsersController extends BaseController {
      */
     public function edit($id)
     {
-        //
+        $artists = Artist::all()->lists( 'name' );
+
+        // throws a 404 if not found SWEET
+        $user = User::findOrFail( $id );
+        return View::make( 'user.edit' , array( 'user' => $user, 'artists' => $artists ));
     }
 
     /**
