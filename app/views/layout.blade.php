@@ -18,13 +18,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="home"><img src="img/kapitalLogo.jpg" alt="your slogan here"></a>
+			  <a class="brand" href="home"><img src="/img/kapitalLogo.jpg" alt="your slogan here"></a>
 			  <h1 class="brand">Kapital Entertainment</h1>
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
 					<li><a href="home">Kapital</a></li>
 				<!--	<li class="dropdown"> -->
-						<li><a href="artists" >Artists</a></li>
+						<li><a href="/artists" >Artists</a></li>
 				<!--		<ul class="dropdown-menu" >
 							<li><a tabindex="-1" href="#">Miss Virginia Rose</a></li>
 							<li><a tabindex="-1" href="#">Conroy Ross</a></li>
@@ -37,19 +37,21 @@
 						</ul>
 					</li>
 				-->
-					<li><a href="portfolio.htm">Schedule</a></li>
-					<li><a href="blogs">Blog</a></li>
-					<li><a href="about.htm">Media</a></li>
+					<li><a href="/portfolio.htm">Schedule</a></li>
+					<li><a href="/blog">Blog</a></li>
+					<li><a href="/about.htm">Media</a></li>
 					<!-- only show if youre authenticated -->
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown">Admin Menu<span class="glyphicon glyphicon-align-justify"></span></a>
 						<ul class="dropdown-menu" >
-							<li><a tabindex="-1" href="/blogs/create">Post Update</a></li>
+							<li><a tabindex="-1" href="/blog/create">Post Update</a></li>
 							<li><a tabindex="-1" href="/medias/create">Add Pic / Link / Video</a></li>
 							<!-- only show if youre katy -->
 							<li class="divider"></li>
 							<li><a tabindex="-1" href="/users/create">Add new user</a></li>
 							<li><a tabindex="-1" href="/artists/create">Add new band</a></li>
+							<li class="divider"></li>
+							<li><a tabindex="-1" href="/users/logout">logout</a></li>
 						</ul>
 					</li>
 				
@@ -60,13 +62,25 @@
 		  </div>
 		</div>
 		<div class="container">
-			@if ( isset( $flash ))
-				<h2>{{{ $flash }}}</h2>
-			@endif
+			<div class="row">
+				@if ( isset( $flash ))
+					<h2>{{{ $flash }}}</h2>
+				@endif
 
-			@yield('content')
+				<!-- TEMPLATE CONTENT INSERTED HERE -->
+				@yield('content')
 
+				<div class="span2 well">
+					<h2>Latest Posts</h2>
+					<ul class="unstyled">
+						@foreach( $blogs as $blog )
+							<h2><a href="#">{{  $blog->title }}</a></h2>
+						@endforeach
+					</ul>
+				</div>
+			</div>
 		</div>
+
 <!-- FOOTER -->
 	  <footer>
 		<div class="container">
@@ -78,8 +92,12 @@
 		  </div>
 		  <div class="span3">
 			<h3>Latest Blog Posts</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit nisl ac metus porta placerat. Donec semper consectetur neque eget hendrerit. <a href="http://www.littlesparkvt.com">Read More></a></p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus suscipit nisl ac metus porta placerat. Donec semper consectetur neque eget hendrerit. <a href="http://www.littlesparkvt.com">Read More></a></p>
+			@if( !empty( $blogs[0] ))
+				<p>{{{ $blogs[0]->body }}}</p>
+			@endif
+			@if( !empty( $blogs[1] ))
+				<p>{{{ $blogs[1]->body }}}</p>
+			@endif
 		  </div>
 		  <div class="span3">
 			<h3>Contact Kapial</h3>
