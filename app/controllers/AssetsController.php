@@ -9,7 +9,10 @@ class AssetsController extends BaseController {
      */
     public function index()
     {
-        //
+        // get all assets
+        $assets = Asset::all();
+        return View::Make( 'assets.index', compact( 'assets' ));
+        // return View::make( 'blogs.create', compact( 'blog' ));
     }
 
     /**
