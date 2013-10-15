@@ -11,12 +11,15 @@
 |
 */
 
-App::before(function($request)
+App::before( function( $request )
 {
 	// get shit for the bottom menu
-	$recentPosts = Blog::all();
+	$blogs = Blog::all();
+
 	$authenticated = Auth::check();
+
 	$isAdmin = false;
+
 	if( $authenticated ) {
 		$isAdmin = Auth::user()->admin;
 	}
