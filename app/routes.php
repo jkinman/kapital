@@ -14,20 +14,18 @@
 // user model route
 // Route::model( 'user', 'User' );
 
-Route::get('home', function()
-{
-    return View::make('home');
-});
+Route::get('/', array( 'uses' => 'HomeController@index' ));
+Route::get('home', array( 'uses' => 'HomeController@index' ));
 
-Route::get('/', function()
-{
-	return View::make('comingSoon');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('comingSoon');
+// });
 
 Route::get( 'superSecretLogin', array( 'uses' => 'UserController@loginForm' ));
 Route::post( 'superSecretLogin', array( 'uses' => 'UserController@login' ));
 
 Route::resource( 'users', 			'UsersController' );
-Route::resource( 'blogs', 			'BlogsController' );
+Route::resource( 'blog', 			'BlogsController' );
 Route::resource( 'artists', 		'ArtistsController');
 Route::resource( 'assets', 			'AssetsController');
