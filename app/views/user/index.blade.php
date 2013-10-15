@@ -1,16 +1,15 @@
 @extends('layout')
 
 @section('content')
-{{ print_r( $users )}}
+
 <!-- Portfolio row of columns -->
-	<div class="row" id="portfolio">
 		<div class="span12">
-			<h1>Portfolio</h1>
+			<h1>Kapital Entertainment Users</h1>
 		</div>
 
 	@foreach ($users as $user)
 		<div class="span3 portthumb">
-			<a href="#" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">
+			<a href="/users/{{ $users['id'] }}/edit" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">
 				<img src="img/portfolioph.jpg" alt="">
 			</a>
 			<h5>{{{ $user['name'] }}}</h5>

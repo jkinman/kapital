@@ -1,7 +1,12 @@
 @extends('layout')
 @section('content')
 
-<h1>{{ $artist['name'] }}</h1>
-<p>{{ $artist['summary'] }}</p>
+	<div class="span12">
+		<h1>{{{$artist->name}}}</h1>
+	</div>
+
+	<div class="span9">
+		<p>{{ $artist['summary'] }}</p>
+	</div>
 
 @stop

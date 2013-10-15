@@ -19,7 +19,7 @@
 				<span class="icon-bar"></span>
 			  </a>
 			  <a class="brand" href="home"><img src="/img/kapitalLogo.jpg" alt="your slogan here"></a>
-			  <h1 class="brand">Kapital Entertainment</h1>
+			  <!-- <h1 class="brand">Kapital Entertainment</h1> -->
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
 					<li><a href="home">Kapital</a></li>
@@ -37,23 +37,30 @@
 						</ul>
 					</li>
 				-->
-					<li><a href="/portfolio.htm">Schedule</a></li>
+					<li><a href="/">Schedule</a></li>
 					<li><a href="/blog">Blog</a></li>
-					<li><a href="/about.htm">Media</a></li>
+					<li><a href="/asset">Media</a></li>
 					<!-- only show if youre authenticated -->
+					@if( Auth::check())
 					<li class="dropdown">
 						<a href="#" data-toggle="dropdown">Admin Menu<span class="glyphicon glyphicon-align-justify"></span></a>
 						<ul class="dropdown-menu" >
 							<li><a tabindex="-1" href="/blog/create">Post Update</a></li>
-							<li><a tabindex="-1" href="/medias/create">Add Pic / Link / Video</a></li>
+							<li><a tabindex="-1" href="/asset/create">Add Pic / Link / Video</a></li>
 							<!-- only show if youre katy -->
+							@if( $currentUser->admin )
 							<li class="divider"></li>
-							<li><a tabindex="-1" href="/users/create">Add new user</a></li>
-							<li><a tabindex="-1" href="/artists/create">Add new band</a></li>
+							<li><a tabindex="-1" href="/user/create">Add new user</a></li>
+							<li><a tabindex="-1" href="/artist/create">Add new band</a></li>
+							@endif
 							<li class="divider"></li>
-							<li><a tabindex="-1" href="/users/logout">logout</a></li>
+							<li><a href="/user">Users</a></li>
+							<li><a tabindex="-1" href="/user/logout">logout</a></li>
 						</ul>
 					</li>
+					@else
+						<li><a href="/superSecretLogin">login</a></li>
+					@endif
 				
 					<!-- <li><a href="contact.htm">Contact</a></li> -->
 				</ul>
@@ -87,7 +94,7 @@
 		<div class="row">
 		  <div class="span3">
 			<div id="jstwitter">
-			  <h3>Twitter Feed</h3> 
+			  <h3><a href="https://twitter.com/katedunnroy">Twitter Feed</a></h3>
 			</div>
 		  </div>
 		  <div class="span3">
@@ -101,7 +108,7 @@
 		  </div>
 		  <div class="span3">
 			<h3>Contact Kapial</h3>
-				<p>Make music or want music? wanna chat? Get at us.</p>
+				<p>Make music? Need music? Wanna chat? Get at us.</p>
 				<br><a href='tel:1-604-808-7110'>+1-604-808-7110</a> 
 				<br><a href='mailto:kate@kapitalentertainment.ca'>kate@kapitalentertainment.ca</a>
 		  </div>
