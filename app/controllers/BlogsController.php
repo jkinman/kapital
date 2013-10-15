@@ -34,8 +34,10 @@ class BlogsController extends BaseController {
     public function store()
     {
         // throw the contents of the form into a new record
+        $newObj = Input::all();
+        $newObj['user_id'] = Auth::user()->id;
 
-        $newEntry = Blog::create( Input::all() );
+        $newEntry = Blog::create( $newObj );
     }
 
     /**
