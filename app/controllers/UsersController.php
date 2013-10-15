@@ -36,7 +36,12 @@ class UsersController extends BaseController {
         }
     }
 
-
+    public function logout() {
+        Auth::logout();
+        Session::flash( 'message', 'logged out' );
+        return Redirect::to('/');
+       
+    }
 
     /**
      * Display a listing of the resource.
