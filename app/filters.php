@@ -13,8 +13,10 @@
 
 App::before( function( $request )
 {
+
 	// get shit for the bottom menu
 	$blogs = Blog::all();
+	View::share( 'blogs', $blogs );
 
 	$authenticated = Auth::check();
 
@@ -23,8 +25,12 @@ App::before( function( $request )
 	if( $authenticated ) {
 		$isAdmin = Auth::user()->admin;
 	}
+	
 	$currentUser = Auth::user();
+    View::share( 'currentUser', $currentUser );
 
+    $artistNames = Artist::all()->lists( 'name' );
+    View::share( 'artistNames', $artistNames );
 });
 
 
