@@ -6,6 +6,12 @@
 
 <input type="filepicker" name="pictures"/>
 
+filepicker.setKey('A8yAqYzKpTycXyMc5hrYCz');
+undefined
+filepicker.pickAndStore({},{},function(InkBlobs){
+   console.log(JSON.stringify(InkBlobs));
+});
+
 {{ Form::model( $assets, [ 'route' => ['assets.store'], 'method' => 'POST' ] ) }}
 	
 	{{ Form::label('title', 'title'); }}
