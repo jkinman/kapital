@@ -36,8 +36,12 @@ class ArtistsController extends BaseController {
     public function store()
     {
         //
+        $artistToStore = Input::all();
 
-        $artist = Artist::create( Input::all() );
+        //remove picture, im going to do some asnc uploading...
+        unset( $artistToStore['picture']);
+
+        $artist = Artist::create( $artistToStore );
         return Redirect::to( 'artists/' . $artist['id'] );
 
     }
@@ -53,7 +57,6 @@ class ArtistsController extends BaseController {
         //
         // return( 'artist with id '.$id );
         $artist = Artist::find( $id );
-        return( var_dump($artist));
         return View::make( 'artists.show' , array( 'artist' => $artist ));
     }
 
