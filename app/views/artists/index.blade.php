@@ -20,6 +20,9 @@
 					</a>
 					<h5>{{{ $artist['name'] }}}</h5>
 					<p> {{{ $artist['summary'] }}} </p>
+					@foreach( $artist->user as $user )
+						{{$user}}
+					@endforeach
 				</div>
 			@endforeach
 		</div>

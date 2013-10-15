@@ -22,7 +22,7 @@
 	{{Form::label('twitter_url', 'twitter_url');}}
 	{{ Form::text( 'twitter_url' );}}
 
-	{{ Form::submit('add'); }}
+	{{ Form::submit('add', array( 'class' => 'btn btn-primary')); }}
 
 {{ Form::close() }}
 

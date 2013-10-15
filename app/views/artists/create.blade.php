@@ -33,7 +33,7 @@
 	<br>
 
 	<br>
-	{{ Form::submit('add'); }}
+	{{ Form::submit('add', array( 'class' => 'btn btn-primary')); }}
 	<hr>
 </div>
 

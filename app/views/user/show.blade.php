@@ -3,8 +3,8 @@
 @section('content')
 	@if( Auth::check() )
 		<h4>
-			<a href="/users/{{$user->id}}/edit">EDIT</a>
-			<a href="/users/{{$user->id}}/delete">DELETE</a>
+			<a href="/user/{{$user->id}}/edit">EDIT</a>
+			<a href="/user/{{$user->id}}/delete">DELETE</a>
 		</h4>
 	@endif
 	<h1>{{{ $user['name'] }}}</h1>

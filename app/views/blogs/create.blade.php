@@ -12,7 +12,7 @@
 	{{ Form::label('body', 'body'); }}
 	{{ Form::textArea( 'body' );}}
 	<br>
-	{{ Form::submit('POST IT!'); }}
+	{{ Form::submit('POST IT!', array( 'class' => 'btn btn-primary')); }}
 
 {{ Form::close() }}
 

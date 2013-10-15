@@ -28,4 +28,5 @@ Route::post( 	'superSecretLogin', array( 'uses' => 'UsersController@login' ));
 Route::resource( 'user', 			'UsersController' );
 Route::resource( 'blog', 			'BlogsController' );
 Route::resource( 'artist', 			'ArtistsController');
+Route::resource( 'artists', 			'ArtistsController');
 Route::resource( 'asset', 			'AssetsController');

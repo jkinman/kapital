@@ -81,7 +81,7 @@
 					<h2>Latest Posts</h2>
 					<ul class="unstyled">
 						@foreach( $blogs as $blog )
-							<h2><a href="#">{{  $blog->title }}</a></h2>
+							<a href="#">{{  $blog->title }}</a>
 						@endforeach
 					</ul>
 				</div>

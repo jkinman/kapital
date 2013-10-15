@@ -47,7 +47,7 @@
 	{{Form::label('twitter_url', 'twitter_url');}}
 	{{ Form::text( 'twitter_url' );}}
 	<br>
-	{{ Form::submit('add'); }}
+	{{ Form::submit('save', array( 'class' => 'btn btn-primary')); }}
 	<hr>
 </div>
 
