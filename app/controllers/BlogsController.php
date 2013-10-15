@@ -48,7 +48,8 @@ class BlogsController extends BaseController {
      */
     public function show($id)
     {
-        //
+        $blog = Blog::findOrFail( $id );
+        return View::make( 'blogs.show', array( 'blog' => $blog ));
     }
 
     /**
