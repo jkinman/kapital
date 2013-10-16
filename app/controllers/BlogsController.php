@@ -38,6 +38,10 @@ class BlogsController extends BaseController {
         $newObj['user_id'] = Auth::user()->id;
 
         $newEntry = Blog::create( $newObj );
+
+        $blogs = Blog::all();
+        return View::make( 'blogs.index' )->with( 'blogs', $blogs );
+
     }
 
     /**
