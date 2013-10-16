@@ -24,6 +24,7 @@ Route::get('/', function()
 
 Route::get( 	'superSecretLogin', array( 'uses' => 'UsersController@loginForm' ));
 Route::post( 	'superSecretLogin', array( 'uses' => 'UsersController@login' ));
+Route::get( 	'logout', array( 'uses' => 'UsersController@logout' ));
 
 Route::resource( 'user', 			'UsersController' );
 Route::resource( 'blog', 			'BlogsController' );
