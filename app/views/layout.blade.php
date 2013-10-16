@@ -55,7 +55,7 @@
 							@endif
 							<li class="divider"></li>
 							<li><a href="/user">Users</a></li>
-							<li><a tabindex="-1" href="/user/logout">logout</a></li>
+							<li><a tabindex="-1" href="/logout">logout</a></li>
 						</ul>
 					</li>
 					@else
