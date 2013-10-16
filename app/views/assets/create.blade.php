@@ -1,27 +1,26 @@
 @extends('layout')
-
 @section('content')
 
-<h1>Add Media (pics / vids / etc)</h1>
+<div class="span12">
 
-<input type="filepicker" name="pictures"/>
+	<h1>Add Media (pics / vids / etc)</h1>
+	<h3>Add picture here</h3>
+	<button id="addPicture" />
 
-filepicker.setKey('A8yAqYzKpTycXyMc5hrYCz');
-undefined
-filepicker.pickAndStore({},{},function(InkBlobs){
-   console.log(JSON.stringify(InkBlobs));
-});
+</div>
 
-{{ Form::model( $assets, [ 'route' => ['assets.store'], 'method' => 'POST' ] ) }}
-	
-	{{ Form::label('title', 'title'); }}
-	{{ Form::text( 'title' );}}
-	
-	{{ Form::label('body', 'body'); }}
-	{{ Form::textArea( 'body' );}}
-	<br>
-	{{ Form::submit('POST IT!'); }}
+<div class="span9">
+	{{ Form::model( $assets, [ 'route' => ['assets.store'], 'method' => 'POST' ] ) }}
+		
+		{{ Form::label('title', 'title'); }}
+		{{ Form::text( 'title' );}}
+		
+		{{ Form::label('body', 'body'); }}
+		{{ Form::textArea( 'body' );}}
+		<br>
+		{{ Form::submit('POST IT!'); }}
 
-{{ Form::close() }}
+	{{ Form::close() }}
+</div>
 
 @stop
