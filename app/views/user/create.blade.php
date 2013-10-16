@@ -11,7 +11,7 @@
 <hr>
 </div>
 <br>
-{{ Form::open(array('url' => 'users', 'files' => true)) }}
+{{ Form::open(array('url' => 'user', 'files' => true)) }}
 <div class="span4">
 
 	{{Form::label('email', 'E-Mail Address');}}
