@@ -40,6 +40,9 @@ class AssetsController extends BaseController {
         $asset = new Asset;
         if( !empty( $data['user_id'] )) {
             $asset->user_id     = $data['user_id'];
+            $user = User::find( $data['user_id'] );
+            $asset->artist_id     = $user->artist_id;
+
         }
         if( !empty( $data['artist_id'] )) {
             $asset->artist_id     = $data['artist_id'];
