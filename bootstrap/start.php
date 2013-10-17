@@ -28,7 +28,7 @@ $app->redirectIfTrailingSlash();
 
 $env = $app->detectEnvironment(array(
 
-	'local' 		=> array( 'Joel\'s MacBook Pro' ),
+	'local' 		=> array( 'kapital-local.ca' ),
 
 ));
 

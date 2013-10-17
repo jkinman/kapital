@@ -23,6 +23,8 @@ class AssetsController extends BaseController {
     public function create()
     {
         //
+        echo( 'create' );
+        die();
     }
 
     /**
@@ -32,7 +34,22 @@ class AssetsController extends BaseController {
      */
     public function store()
     {
-        //
+
+        $data = Input::all();
+
+        $asset = new Asset;
+        if( !empty( $data['user_id'] )) {
+            $asset->user_id     = $data['user_id'];
+        }
+        if( !empty( $data['artist_id'] )) {
+            $asset->artist_id     = $data['artist_id'];
+        }
+        $asset->url         = $data['url'];
+        if( !empty( $data['type'] )) {
+            $asset->type     = $data['type'];
+        }
+        $asset->save();
+        return( 'ok' );
     }
 
     /**

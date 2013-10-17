@@ -45,6 +45,7 @@ h1{
   word-spacing: 0.3em;
 }
 
-.nav {
+.navbar .nav {
 	float: right;
+
 }

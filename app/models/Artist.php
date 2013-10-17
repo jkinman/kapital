@@ -5,7 +5,7 @@ class Artist extends Eloquent {
 
     public static $rules = array();
 
-    public function picture(){
+    public function assets(){
     	return $this->hasMany( 'Asset' );
     }
 

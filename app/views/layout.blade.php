@@ -81,7 +81,7 @@
 					<h2>Latest Posts</h2>
 					<ul class="unstyled">
 						@foreach( $blogs as $blog )
-							<a href="#">{{  $blog->title }}</a>
+							<li><a href="/blog/{{{$blog->id}}}">{{  $blog->title }}</a></li>
 						@endforeach
 					</ul>
 				</div>
@@ -100,10 +100,13 @@
 		  <div class="span3">
 			<h3>Latest Blog Posts</h3>
 			@if( !empty( $blogs[0] ))
-				<p>{{{ $blogs[0]->body }}}</p>
+				<li><a href="/blog/{{{$blogs[0]->id}}}"></a>{{{ $blogs[0]->body }}}</li>
 			@endif
 			@if( !empty( $blogs[1] ))
-				<p>{{{ $blogs[1]->body }}}</p>
+				<li><a href="/blog/{{{$blogs[1]->id}}}"></a>{{{ $blogs[1]->body }}}</li>
+			@endif
+			@if( !empty( $blogs[2] ))
+				<li><a href="/blog/{{{$blogs[2]->id}}}"></a>{{{ $blogs[2]->body }}}</li>
 			@endif
 		  </div>
 		  <div class="span3">
@@ -127,7 +130,6 @@
 
 <!-- /container -->
 
-	{{ HTML::script("js/kapital.js")}}
 	{{ HTML::script("js/jquery.js") }}
 	{{ HTML::script("js/bootstrap-transition.js" ) }}
 	{{ HTML::script("js/bootstrap-alert.js") }}
@@ -143,5 +145,6 @@
 	{{ HTML::script("js/bootstrap-typeahead.js") }}
 	{{ HTML::script("js/anchor.js") }}
 	{{ HTML::script("js/twitter.js") }}
+	{{ HTML::script("js/kapital.js")}}
 	</body>
 </html>

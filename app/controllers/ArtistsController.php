@@ -68,7 +68,8 @@ class ArtistsController extends BaseController {
      */
     public function edit($id)
     {
-        //
+        $artist = User::findOrFail( $id );
+        return View::make( 'artists.edit' , array( 'artist' => $artist ));
     }
 
     /**

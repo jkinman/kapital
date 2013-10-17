@@ -6,8 +6,13 @@ use Illuminate\Auth\Reminders\RemindableInterface;
 class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public function artist() {
-		return $this->belongsTo( 'artist' );
+		return $this->belongsTo( 'Artist' );
 	}
+
+	public function assets() {
+		return $this->hasMany( 'Asset' );
+    }
+
 
 	/**
 	 * The database table used by the model.

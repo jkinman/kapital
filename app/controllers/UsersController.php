@@ -1,7 +1,7 @@
 <?php
 
 class UsersController extends BaseController {
-
+    
     /**
      * Show login form
      *
@@ -155,13 +155,24 @@ class UsersController extends BaseController {
      * @param  int  $id
      * @return Response
      */
-    public function update($id)
+    public function update( $id )
     {
         $artists = Artist::all()->lists( 'name' );
-
         // throws a 404 if not found SWEET
         $user = User::findOrFail( $id );
-        return View::make( 'user.edit' , array( 'user' => $user, 'artists' => $artists ));
+        
+        $newVals = Input::all();
+
+        $user->email    = $newVals['email'];
+        $user->password = $newVals['password'];
+        $user->admin    = $newVals['admin'];
+        $user->name     = $newVals['name'];
+        $user->bio      = $newVals['bio'];
+        $user->facebook_url = $newVals['facebook_url'];
+        $user->twitter_url  = $newVals['twitter_url'];
+
+        $user->save();    
+        return View::make( 'user.show' , array( 'user' => $user, 'artists' => $artists ));
     }
 
     /**

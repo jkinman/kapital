@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
 
-<div class="span12">	
+<div id="master"data-userid="{{{$user->id}}}" class="span12">	
 	<h1>Editing User data - {{{$user->name}}} </h1>
 	<h3>This is a user of the site, they will be belong to a band, and be able 
 		to post blog updates on behalf of themselves, and post pics and videos of thier band. </h3>
@@ -11,12 +11,15 @@
 </div>
 <div class="span9">
 	<h2>Add pics of this user</h2>
-	<input type="filepicker" name="myName"/>
+	<p>To add pics, just click the button below and follow the instructions. These will be associated with the current user, and also with thier band</p>
+	<img id="addPicture" src="/img/icon-custom.png">
+
 <br>
 <hr>
 </div>
 <br>
-{{ Form::model( $user, array( 'route' => array('user.update', $user->id))) }}
+
+{{ Form::model( $user, array( 'action' => array( 'UsersController@update', $user->id ), 'method' => 'PUT')) }}
 <div class="span4">
 
 	{{Form::label('email', 'E-Mail Address');}}

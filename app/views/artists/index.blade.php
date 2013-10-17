@@ -5,9 +5,11 @@
 		<div class="span12">
 			<h1>Kapital Artists</h1>
 			@if( Auth::check())
-				@if( $currentUser->admin )
-					<a href="/artist/create">NEW ARTIST</a>
-				@endif
+				<div class="actions">
+					@if( $currentUser->admin )
+						<a href="/artist/create">NEW ARTIST</a>
+					@endif
+				</div>
 			@endif
 		</div>
 
