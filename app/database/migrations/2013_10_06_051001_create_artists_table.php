@@ -18,6 +18,7 @@ class CreateArtistsTable extends Migration {
             $table->text('summary');
             $table->text('facebook_url');
             $table->text('twitter_url');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -20,6 +20,7 @@ class CreateAssetsTable extends Migration {
             $table->integer('user_id');
             $table->text('url');
             $table->text('type');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
