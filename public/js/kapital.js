@@ -57,7 +57,6 @@ function emailSubscribe( ) {
 	    "double_optin": true,
 	    "update_existing": true,
 	    "send_welcome": true
-	};		
 	};
 
 	$.ajax( {
