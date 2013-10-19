@@ -87,6 +87,10 @@ class BlogsController extends BaseController {
     public function destroy($id)
     {
         //
+        $blog = Blog::findOrFail( $id );
+
+        $blog->delete();
+
     }
 
 }
