@@ -28,13 +28,12 @@
 					<h5>{{{ $artist['name'] }}}</h5>
 					<p> {{{ $artist['summary'] }}} </p>
 					@foreach( $artist->user as $user )
-						{{$user}}
 					@endforeach
 				</div>
 			@endforeach
 		</div>
 	</div>
-	
+
 	<div class="span2 well">
 		<h2>Latest Posts</h2>
 		<ul class="unstyled">
