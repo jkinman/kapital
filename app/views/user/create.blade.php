@@ -25,6 +25,9 @@
 	
 	{{Form::label('artist_id', 'What band does this person belong to?');}}
 	{{ Form::select( 'artist_id', $artists );}}
+	
+	{{Form::label('type', 'User\'s role (site admins are not displayed on the kapital roster)');}}
+	{{ Form::select( 'type', $userTypes );}}
 
 	{{Form::label('name', 'name');}}
 	{{ Form::text( 'name' );}}

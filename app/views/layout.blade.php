@@ -18,11 +18,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="home"><img src="/img/kapitalLogo.jpg" alt="your slogan here"></a>
+			  <a class="brand" href="/home"><img src="/img/Kapital-Entertainment-logo.png" alt="KApital Entertainment"></a>
 			  <!-- <h1 class="brand">Kapital Entertainment</h1> -->
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
-					<li><a href="home">Kapital</a></li>
+					<li><a href="/home">Home</a></li>
 				<!--	<li class="dropdown"> -->
 						<li><a href="/artists" >Artists</a></li>
 				<!--		<ul class="dropdown-menu" >
@@ -37,7 +37,7 @@
 						</ul>
 					</li>
 				-->
-					<li><a href="/">Schedule</a></li>
+					<!-- <li><a href="/">Schedule</a></li> -->
 					<li><a href="/blog">Blog</a></li>
 					<li><a href="/asset">Media</a></li>
 					<!-- only show if youre authenticated -->
@@ -77,14 +77,6 @@
 				<!-- TEMPLATE CONTENT INSERTED HERE -->
 				@yield('content')
 
-				<div class="span2 well">
-					<h2>Latest Posts</h2>
-					<ul class="unstyled">
-						@foreach( $blogs as $blog )
-							<li><a href="/blog/{{{$blog->id}}}">{{  $blog->title }}</a></li>
-						@endforeach
-					</ul>
-				</div>
 			</div>
 		</div>
 

@@ -2,18 +2,19 @@
 @section('content')
 
 	<div class="span12">
-		<h1>Media Library</h1>
+		<h1>Kapital Assets</h1>
 		@if( Auth::check())
-			<img src="img/icon-custom.png">
 		@endif
 	</div>
 
-	<!-- <div class="row" id="portfolio"> -->
-		<div class="span9">
-			@foreach( $assets as $asset )
-				{{{ $asset->url }}}
+	<div class="row" id="portfolio">
+		<div class="span10">
+			@foreach ($assets as $asset)
+				<div class="span3 portthumb">
+					<img src="{{{$asset->url . '/convert?w=300&h=250&fit=crop'}}}" alt="{{{ $asset['title'] }}}">
+				</div>
 			@endforeach
 		</div>
-	<!-- </div> -->
+	</div>
 
 @stop

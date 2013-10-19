@@ -13,12 +13,17 @@
 			@endif
 		</div>
 
+		<div class="row" id="portfolio">
 		<div class="span9">
 			@foreach ($artists as $artist)
 				<div class="span3 portthumb">
-					<a href="/artist/{{$artist['id']}}" rel="popover" data-content="And here's some amazing content. It's very engaging. right?" 
+					<a href="/artist/{{$artist['id']}}" rel="popover" data-content="{{{ $artist['name'] }}}" 
 					data-original-title="{{{ $artist['name'] }}}">
-						<img src="img/portfolioph.jpg" alt="{{{ $artist['summary'] }}}">
+					@if( ! $artist->assets->isEmpty())
+						<img src="{{{$artist->assets->first()->url . '/convert?w=300&h=250&fit=crop'}}}" alt="{{{ $artist['summary'] }}}">
+					@else
+						<img src="img/placeholderProfile.png" alt="{{{ $artist['summary'] }}}">
+					@endif
 					</a>
 					<h5>{{{ $artist['name'] }}}</h5>
 					<p> {{{ $artist['summary'] }}} </p>
@@ -28,4 +33,15 @@
 				</div>
 			@endforeach
 		</div>
+	</div>
+	
+	<div class="span2 well">
+		<h2>Latest Posts</h2>
+		<ul class="unstyled">
+			@foreach( $blogs as $blog )
+				<li><a href="/blog/{{{$blog->id}}}">{{  $blog->title }}</a></li>
+			@endforeach
+		</ul>
+	</div>
+
 @stop

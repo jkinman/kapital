@@ -36,22 +36,22 @@
 		  <img src="img/icon-response.png">
 	   </div>
 	   <div class="span3">
-		  <h3>Section one</h3>
-		  <p>Kapital does all this shit and blah blah blah blah blah blah blah blah. Katy Katy Katy.</p>
+		  <h3>Management</h3>
+		  <p>Kapital Entertainment provides management services to local Vancouver singer / songwriters that are looking to further their music careers to a higher level of exposure and experience. We provide the tools to help in the process of bookings, recordings, press, social media assistance and overall development of the artists craft. Contact us for more detailed information on becoming a part of the Kapital roster.
 		</div>
 		<div class="span1">
 		  <img src="img/icon-custom.png">
 		</div>
 		<div class="span3">
-		  <h3>Section Two</h3>
-		  Food truck Pinterest 3 wolf moon yr chillwave. Etsy sriracha flannel disrupt, keffiyeh blue bottle messenger bag four loko meggings salvia +1 pour-over yr. You probably haven't heard of them art party trust fund keffiyeh Bushwick mlkshk, Schlitz whatever biodiesel food truck seitan gluten-free.</p>
+		  <h3>Booking</h3>
+		  <p>Kapital Entertainment provides it’s rosters acts and other local talent from around the city with live music shows on Vancouver’s best stages. Branching from smaller pubs to clubs on the Granville strip and the downtown core, Kapital strives to secure booking opportunities that showcases the act’s talent in the best possible spaces to the best possible crowds. For information regarding how you can become a part of a Kapital Entertainment booking around town, contact us.</p>
 		</div>
 		<div class="span1">
 		  <img src="img/icon-support.png">
 		</div>
 		<div class="span3">
-		  <h3>Section Three</h3>
-		  <p>Skateboard Etsy post-ironic photo booth dreamcatcher blue bottle fanny pack keytar. Locavore Tonx shoreditch food truck iPhone Austin, DIY gentrify. Odd Future synth organic, gentrify pickled tote bag tofu.</p>
+		  <h3>Hosting</h3>
+		  <p>Kapital Entertainment now offers hosting opportunities. Owner/President, Kate Dunn-Roy commits time to building full live music bills for venues around town using acts from the Kapital roster and acts around town to create live music events for the masses. Some past successes have included shows at Vancouver FanClub, Joe’s Apartment, The Railway Club, The Backstage Lounge, and the Media Club. Only the most reputable venues are used in the building of shows for Kapital acts, because only the best venues are worth putting a Kapital act on stage for. All shows are built with 110% commitment to being successful in the eyes of the artists, attendees and venue’s staff. All shows also commit to bringing a level of talent from outside the Kapital roster that not only compliments but elevates the level of talent seen on our roster. Contact us for questions/concerns in regard to Kapital Entertainment hosting a live music event for you or your venue.</p>
 		</div>
 	</div>
 
