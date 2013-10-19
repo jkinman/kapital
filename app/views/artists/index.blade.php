@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="row" id="portfolio">
-		<div class="span9">
+		<div class="span10">
 			@foreach ($artists as $artist)
 				<div class="span3 portthumb">
 					<a href="/artist/{{$artist['id']}}" rel="popover" data-content="{{{ $artist['name'] }}}" 
