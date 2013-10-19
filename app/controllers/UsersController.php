@@ -53,7 +53,7 @@ class UsersController extends BaseController {
 
         $users = User::all();
 
-        return View::make( 'user.index', array( 'users' => $users->toArray() ));
+        return View::make( 'user.index', array( 'users' => $users ));
     }
 
     /**
