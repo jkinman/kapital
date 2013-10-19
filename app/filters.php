@@ -32,7 +32,8 @@ App::before( function( $request )
     $artistNames = Artist::all()->lists( 'name' );
     View::share( 'artistNames', $artistNames );
 
-    View::share( 'userTypes', $artistNames );
+    $userTypes = array( 'Artist', 'Site Admin' );
+    View::share( 'userTypes', $userTypes );
 
 });
 
