@@ -38,3 +38,32 @@ function addPic( obj ) {
 		} );
 
 }
+
+function emailSubscribe( ) {
+
+	var MAILCHIMP_API_KEY = b1e6ce9b2cfe599af491897b3349d556-us7;
+	var email = $( '#email' ).value();
+	var url = 'us7.api.mailchimp.com/2.0//lists/subscribe.json';
+	var postData = {
+	    "apikey": MAILCHIMP_API_KEY,
+	    "id": '1826080186',
+	    "email": {
+	        "email": email,
+	    },
+	    "merge_vars": {
+	        "new-email": email,
+	    },
+	    "email_type": "html",
+	    "double_optin": true,
+	    "update_existing": true,
+	    "send_welcome": true
+	};		
+	};
+
+	$.ajax( {
+		url:url, 
+		type: 'post',
+		data: postData
+	} );
+
+}
