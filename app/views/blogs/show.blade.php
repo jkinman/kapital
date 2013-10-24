@@ -14,7 +14,7 @@
 
 	<div class="span9">
 		<p>{{ $blog->body }}</p>
-		<h2>Posted by <a href="/users/{{$blog->user_id}}">{{  $blog->user->name }}</a></h2>
+		<h2>Posted by <a href="/user/{{$blog->user_id}}">{{  $blog->user->name }}</a></h2>
 		<h5>on {{ $blog->created_at }}</h5>
 	</div>
 
