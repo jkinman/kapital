@@ -14,13 +14,13 @@
 					<img width="1280" height="400" src="{{{$asset->url . '/convert?w=1280&h=400&fit=crop'}}}" alt="">
 				  </div>
 				@endforeach
-<!--  			  <div class="item">
+ 			  <div class="item">
 				<img src="img/front2.jpg" alt="">
 			  </div>
  			  <div class="item active">
 				<img src="img/front3.jpg" alt="">
 			  </div>
- --><!--  			  <div class="item">
+ <!--  			  <div class="item">
 				<img src="img/front1.jpg" alt="">
 			  </div>
  --> 			</div>
