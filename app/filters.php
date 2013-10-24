@@ -21,7 +21,6 @@ App::before( function( $request )
 	$authenticated = Auth::check();
 
 	$isAdmin = false;
-
 	if( $authenticated ) {
 		$isAdmin = Auth::user()->admin;
 	}

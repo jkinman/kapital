@@ -10,8 +10,8 @@ class BlogsController extends BaseController {
     public function index()
     {
         //
-        $blogs = Blog::all();
-        return View::make( 'blogs.index', array( 'blogs' => $blogs ));
+        // $blogs = Blog::all();
+        return View::make( 'blogs.index' );
 
     }
 
