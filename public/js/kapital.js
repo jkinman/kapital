@@ -64,5 +64,6 @@ function emailSubscribe( ) {
 		type: 'post',
 		data: postData
 	} );
-
+	
+	$('.carousel').carousel()
 }
