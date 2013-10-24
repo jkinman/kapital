@@ -11,7 +11,7 @@ class BlogsController extends BaseController {
     {
         //
         $blogs = Blog::all();
-        return View::make( 'blogs.index' )->with( 'blogs', $blogs );
+        return View::make( 'blogs.index', array( 'blogs' => $blogs ));
 
     }
 
