@@ -22,7 +22,9 @@ class HomeController extends BaseController {
 
 	public function index() {
 
-	    return View::make('home');
+		$assets = Asset::all();
+
+	    return View::make('home', array( 'assets' => $assets ));
 
 	}
 

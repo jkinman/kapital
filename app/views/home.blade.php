@@ -9,6 +9,11 @@
 		<div class="span12 hidden-phone">
 		  <div id="myCarousel" class="carousel slide">
 			<div class="carousel-inner">
+				@foreach( $assets as $asset )
+				  <div class="item">
+					<img src="{{{$asset->url . '/convert?w=1280&h=400&fit=crop'}}}" alt="">
+				  </div>
+				@endforeach
 			  <div class="item">
 				<img src="img/front1.jpg" alt="">
 			  </div>
