@@ -14,13 +14,13 @@
 // user model route
 // Route::model( 'user', 'User' );
 
-// Route::get('/', 	array( 'uses' => 'HomeController@index' ));
+Route::get('/', 	array( 'uses' => 'HomeController@index' ));
 Route::get('home', 	array( 'uses' => 'HomeController@index' ));
 
-Route::get('/', function()
-{
-	return View::make('comingSoon');
-});
+// Route::get('/', function()
+// {
+// 	return View::make('comingSoon');
+// });
 
 Route::get( 	'superSecretLogin', array( 'uses' => 'UsersController@loginForm' ));
 Route::post( 	'superSecretLogin', array( 'uses' => 'UsersController@login' ));
