@@ -18,7 +18,7 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="/home"><img src="/img/Kapital-Entertainment-logo.png" alt="KApital Entertainment"></a>
+			  <a class="brand" href="/home"><img src="/img/Kapital-Entertainment-logo.png" alt="Kapital Entertainment"></a>
 			  <!-- <h1 class="brand">Kapital Entertainment</h1> -->
 			  <div class="nav-collapse in" style="height:auto;">
 				<ul class="nav">
