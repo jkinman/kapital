@@ -49,3 +49,12 @@ h1{
 	float: right;
 
 }
+
+.span3 .li {
+  max-height: 200px;
+}
+
+.portthumb .p {
+  height: 300px;
+  overflow: hidden;
+}
