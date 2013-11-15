@@ -102,7 +102,7 @@
 			@endif
 		  </div>
 		  <div class="span3">
-			<h3>Contact Kapial</h3>
+			<h3>Contact Kapital</h3>
 				<p>Make music? Need music? Wanna chat? Get at us.</p>
 				<br><a href='tel:1-604-808-7110'>+1-604-808-7110</a> 
 				<br><a href='mailto:kate@kapitalentertainment.ca'>kate@kapitalentertainment.ca</a>
