@@ -52,6 +52,7 @@ h1{
 
 .span3 li {
   max-height: 200px;
+  overflow: hidden;
 }
 
 .portthumb p {
