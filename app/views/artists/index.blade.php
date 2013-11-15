@@ -25,7 +25,7 @@
 						<img src="img/placeholderProfile.png" alt="{{{ $artist['summary'] }}}">
 					@endif
 					</a>
-					<h5>{{{ $artist['name'] }}}</h5>
+					<h3>{{{ $artist['name'] }}}</h3>
 					<p> {{{ $artist['summary'] }}} </p>
 					@foreach( $artist->user as $user )
 					@endforeach

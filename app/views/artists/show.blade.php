@@ -6,7 +6,7 @@
 	</div>
 
 	<div class="span9">
-		<h2>{{ $artist['summary'] }}</h2>
+		<h4>{{ $artist['summary'] }}</h4>
 			<div class="row" id="portfolio">
 			@foreach( $artist->assets as $asset )
 				<div class="span3 portthumb">
