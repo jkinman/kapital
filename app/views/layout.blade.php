@@ -92,13 +92,13 @@
 		  <div class="span3">
 			<h3>Latest Blog Posts</h3>
 			@if( !empty( $blogs[0] ))
-				<li><a href="/blog/{{{$blogs[0]->id}}}"></a>{{{ $blogs[0]->body }}}</li>
+				<li><a href="/blog/{{{$blogs[0]->id}}}"></a>{{{ $blogs[0]->title }}}</li>
 			@endif
 			@if( !empty( $blogs[1] ))
-				<li><a href="/blog/{{{$blogs[1]->id}}}"></a>{{{ $blogs[1]->body }}}</li>
+				<li><a href="/blog/{{{$blogs[1]->id}}}"></a>{{{ $blogs[1]->title }}}</li>
 			@endif
 			@if( !empty( $blogs[2] ))
-				<li><a href="/blog/{{{$blogs[2]->id}}}"></a>{{{ $blogs[2]->body }}}</li>
+				<li><a href="/blog/{{{$blogs[2]->id}}}"></a>{{{ $blogs[2]->title }}}</li>
 			@endif
 		  </div>
 		  <div class="span3">
