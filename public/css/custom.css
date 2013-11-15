@@ -50,11 +50,11 @@ h1{
 
 }
 
-.span3 .li {
+.span3 li {
   max-height: 200px;
 }
 
-.portthumb .p {
-  height: 300px;
+.portthumb p {
+  height: 250px;
   overflow: hidden;
 }
