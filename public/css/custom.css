@@ -51,7 +51,7 @@ h1{
 }
 
 .span3 li {
-  max-height: 200px;
+  max-height: 60px;
   overflow: hidden;
 }
 
